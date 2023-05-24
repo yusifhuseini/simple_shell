@@ -1,0 +1,69 @@
+#include "shell.h"
+
+/**
+ * main - control shell process
+ * @ac: arg num
+ * @av: arg array
+ * @env: env var
+ * Code by - Huseini Yusif & Bennet Aboagye-Asare
+ * Return: 0 on success
+ */
+
+int main(int ac, char **av, char **env)
+{
+	char *_str = NULL, *no_command = "\n";
+	char **_args = NULL;
+	int _report = 1, kill_is = 0, cicles = 1;
+	size_t _size_str;
+
+	kill_is = isatty(STDIN_FILENO);
+	if (kill_is)
+		_printf("#cisfun$ ");
+	while (_report && (getline(&_str, &_size_str, stdin) != EOF))
+	{
+		if (countFunc(_str) > 0)
+		{
+			if (_stringCmp(_str, no_command) != 0)
+			{
+				_args = tokenArg(_str);
+				_report = execFunc(&cicles, _args, av, env);
+				free(_str);
+				free(_args);
+				_str = NULL;
+				_args = NULL;
+
+				if (kill_is && _report != 0)
+					_printf("#cisfun$ ");
+				cicles++;
+			}
+		}
+		else if (kill_is != 0)
+			_printf("#cisfun$ ");
+
+	}
+
+	if (kill_is && _report != 0)
+		_printf("\n");
+	free(_str);
+	free(_args);
+	ac = ac;
+	return (0);
+}
+
+/**
+  * countFunc - letter string counter
+  * @s: evaluate str
+  * Return: num of letters
+  */
+int countFunc(char *s)
+{
+	int i = 0, cont = 0;
+
+	while (s[i])
+	{
+		if (s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
+			cont++;
+		i++;
+	}
+	return (cont);
+}

@@ -1,0 +1,15 @@
+Command: echo [-neE] [arg ...]
+
+Description:
+The `echo` command is a tool used in a command-line interface (CLI) or shell environment. Its purpose is to display text or variables as output on the screen. When invoked, `echo` takes the provided arguments and prints them to the standard output, which is typically the console or terminal window. The arguments are separated by a single space character and followed by a newline character to create a new line after the output.
+
+Options:
+- The `-n` option suppresses the addition of a newline character at the end of the output, allowing for the text to be displayed without a line break.
+- The `-e` option enables the interpretation of special backslash escapes in the arguments. This means that certain sequences of characters starting with a backslash will be replaced with specific representations. For example, `\n` will be interpreted as a new line and `\t` as a horizontal tab.
+- The `-E` option explicitly disables the interpretation of backslash escapes. It ensures that backslashes are treated as regular characters and not as part of special sequences.
+
+Backslash-Escaped Characters:
+When using `echo`, you can include special sequences of characters that start with a backslash. These sequences are interpreted and replaced with specific characters or symbols. For instance, `\n` represents a new line, `\t` represents a horizontal tab, and `\\` represents a backslash.
+
+Exit Status:
+The `echo` command returns a success status unless there is an error while writing the output. In normal circumstances, it signifies that the command executed successfully.

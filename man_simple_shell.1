@@ -1,0 +1,117 @@
+." Manual page for Simple Shell
+.TH "Simple Shell" 1 "15 May 2023" "1.0" "Manual page for Simple Shell"
+
+.SH NAME
+hsh Simple Shell - Command Line Interpreter for ALX Software Engineering Program
+
+.SH SYNOPSIS
+simple_shell [OPTIONS] [COMMAND]
+
+.SH DESCRIPTION
+The Simple Shell is a command line interpreter developed as part of the ALX Software Engineering Program. It provides a user-friendly interface for executing commands and managing processes in various Linux environments. We are glad to introduce you to the hsh Simple Shell project! This software is a straightforward shell program that can be compiled and executed from the command line on various Linux distributions.
+
+.SH OVERVIEW
+The Simple Shell project is a significant undertaking conducted by the students of the ALX Software Engineering Program. It aims to showcase their skills in command line interpretation, process handling, and shell scripting. Yusif Huseini and Bennet Aboagye-Asare, both students of the ALX software engineering program, have collaborated on the significant team project known as the hsh Simple Shell project.
+
+.SH RETURN VALUE
+The shell will provide the error code from the most recently executed command, and it will be followed by either the input of ctrl-d or exiting without any specific status code.
+
+.SH SYNTAX
+$ <command> <flags or options> <argument 1> <argument 2> ...
+
+.SS
+$ <command> | ./hsh
+
+.SS EXAMPLE 1:
+$ /bin/ls
+
+.SS EXAMPLE 2:
+$ ls -l
+
+.SS EXAMPLE 3:
+$ cat textfile
+
+.SS EXAMPLE 4:
+$ echo "ls -l" | ./hsh
+
+.SH OPTIONS
+.B -h, --help
+Display the help message and usage information.
+
+.B -v, --version
+Show the version number of the Simple Shell.
+
+.B -l, --log
+Enable logging of shell commands and their outputs.
+
+.B -d, --debug
+Activate debug mode for enhanced troubleshooting and error analysis.
+
+.SH COMMANDS
+The Simple Shell supports a wide range of built-in commands and can execute external commands available in the system.
+
+.SH EXAMPLES
+.B EXAMPLE 1:
+.PP
+.B simple_shell -l
+
+This example launches the Simple Shell with command logging enabled.
+
+.SH BUILTIN COMMANDS
+
+.SS cd
+- change directory
+
+.SS alias
+- create or list an alias
+
+.SS history
+- display the command history for the current shell session
+
+.SS env
+- list the current environment variable
+
+.SS help
+- display help for a builtin command
+
+.SS exit
+- exit from shell
+
+.SS unsetenv
+- unset an environment variable
+
+.SS setenv
+- set and environment variable
+
+This example starts the Simple Shell in debug mode and executes multiple commands for analysis.
+
+.SH SEE ALSO
+.BR bash (1),
+.BR sh (1),
+.BR exec (3),
+.BR fork (2),
+.BR pipe (2),
+.BR wait (2),
+.BR signal (7),
+.BR access(2),
+.BR chdir(2),
+.BR _exit(2),
+.BR open(2),
+.BR write(2),
+.BR getcwd(3),
+.BR malloc(3),
+.BR read(2),
+.BR exit(3),
+.BR stat(2),
+.BR fflush(3),
+.BR execve(2),
+.BR isatty(3),
+.BR free(3),
+
+.SH BUGS
+No known bugs have been reported in the Simple Shell.
+
+.SH AUTHORS
+The Simple Shell project is a collaborative effort of the students enrolled in the ALX Software Engineering Program.
+Huseini Yusif
+Bennet Aboagye-Asare

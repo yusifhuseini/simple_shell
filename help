@@ -1,0 +1,13 @@
+Bash Shell Command Overview
+
+Welcome to the GNU Bash shell! The following information provides an overview of the built-in commands available in this shell. These commands are an integral part of the shell itself, designed to help you interact with your system effectively.
+
+To explore the list of built-in commands, simply type help in the shell. If you want to learn more about a specific command, type help followed by the command's name. For example, help cd will provide detailed information about the cd command, which is used for changing directories.
+
+In addition to the built-in commands, there are external commands that are not listed here. To discover more about those commands, you can use the man command with the -k option or the info command.
+
+If you need comprehensive documentation about the Bash shell, you can use the info command with the argument bash. It will provide you with in-depth information about the shell and its features.
+
+Please note that any commands marked with a star (*) are currently disabled and cannot be used.
+
+Feel free to explore the built-in commands and their descriptions below. If you have any questions or need further assistance, don't hesitate to ask.

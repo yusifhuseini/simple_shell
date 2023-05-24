@@ -1,0 +1,45 @@
+.TH _PRINTF 3 "15 MAY 2023" "version 1.0"
+.SH NAME _printf
+_printf Function: Print Formatted Output
+.SH SYNOPSIS
+_printf is a versatile function that allows users to display formatted output in various ways. It supports printing strings, characters, numbers, and string literals based on user-defined formats. Furthermore, it provides the added benefit of returning the length of the printed characters.
+.SH DESCRIPTION
+The _printf function provides flexible printing capabilities by following a simple pattern. Users can utilize this function by specifying a format string as the first parameter, which can include placeholders for values to be printed. The format string can contain a combination of plain text and format specifiers indicated by the '%' symbol, such as %s, %c, %i, and %d, for strings, characters, integers, and decimals, respectively.
+.PP
+When invoking _printf, users pass the format string as the first argument, followed by any additional values corresponding to the format specifiers. These values will replace the placeholders in the format string during printing.
+.PP
+.SH EXAMPLES
+Here are some examples to illustrate the usage of _printf:
+.PP
+Example 1:
+.PP
+_printf("This is a sentence with no format.");
+.PP
+Output: This is a sentence with no format.
+.PP
+Example 2:
+.PP
+_printf("Hello, I'm %s and I'm %d years old", "Huseini", 30);
+.PP
+Output: Hello, I'm Huseini and I'm 30 years old
+.PP
+Example 3:
+.PP
+_printf("The ASCII value of '%c' is %d", 'z', 122);
+.PP
+Output: The ASCII value of 'z' is 122
+.PP
+.SH SEE ALSO
+The _printf function is related to other input/output functions, including putchar, puts, and printf, which offer various ways to display information to the user.
+.PP
+.SH BUGS
+Please report any bugs encountered while using _printf.
+.PP
+.SH AUTHOR
+This manual page was authored by Huseini Yusif and Bennet Aboagye-Asare.
+.PP
+.SH COPYRIGHT
+This program is licensed under the GNU Lesser General Public License version 2.1.
+.PP
+.SH RETURN VALUE
+The _printf function returns the total number of characters printed, or -1 in case of an error.

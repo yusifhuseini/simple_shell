@@ -1,0 +1,27 @@
+CD - Change Directory
+
+The cd command is used to modify the current working directory within the shell environment.
+
+Syntax:
+cd [-L|[-P [-e]] [-@]] [dir]
+
+Overview:
+The cd command provides the flexibility to change the shell's current working directory to a specified directory, referred to as "dir". If no directory is specified, the command defaults to the value stored in the HOME shell variable.
+
+To facilitate directory searching, the CDPATH environment variable defines a search path consisting of multiple directory names separated by colons (:). A null directory name signifies the current directory. If the specified directory (dir) begins with a slash (/), CDPATH is bypassed.
+
+In situations where the specified directory cannot be located and the "cdable_vars" shell option is enabled, the command interprets the input as a variable name. If the variable contains a value, that value is used as the directory.
+
+Options:
+
+-L: Forces the command to follow symbolic links by resolving symbolic links in the specified directory (dir) after handling instances of '..'.
+-P: Utilizes the physical directory structure without following symbolic links. It resolves symbolic links in the specified directory (dir) prior to processing instances of '..'.
+-e: When the -P option is provided and determining the current working directory fails, the command exits with a non-zero status.
+-@: On systems supporting this functionality, presents a file with extended attributes as a directory that contains the file attributes.
+
+By default, symbolic links are followed, mimicking the behavior as if '-L' were explicitly specified. The usage of '..' involves removing the immediately preceding pathname component up to a slash or the beginning of the specified directory (dir).
+
+Exit Status:
+The cd command returns a status of 0 upon successful directory change. When the -P option is used, a successful change is confirmed if the $PWD variable is set accordingly. Any other value indicates a non-zero exit status.
+
+Please note that the above explanation and options pertain specifically to the 'cd' command in the shell environment. Variations may exist across different shells in terms of behavior and additional options associated with the 'cd' command.
